@@ -1,0 +1,37 @@
+.showcase>div{
+    padding-top: 30px;
+}
+
+.showcase_btn{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    position: absolute;
+    bottom: 10px;
+    opacity: 0;
+    transition: .4s;
+    a{
+        font-size: 20px;
+        color: gray;
+        border-bottom: 1px solid gray;
+    }
+
+}
+
+
+.swiper-slide img:hover ~ .showcase_btn {
+    
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    position: absolute;
+    bottom: 10px;
+    transition: .4s;
+    a{
+        font-size: 20px;
+        color: gray;
+        border-bottom: 1px solid gray;
+    }
+
+  }

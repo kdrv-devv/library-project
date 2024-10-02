@@ -1,0 +1,138 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap");
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // overflow: hidden;
+
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 90%;
+    height: 500px;
+    // border-radius: 80px;
+    object-fit: cover;
+
+  }
+
+
+
+  @mixin custom-button($width: 80%, $height: 50px, $bg-color:transparent, $text-color: #fff, $font-size: 16px, $border-radius: 8px, $hover-bg-color: transparent, $hover-border-color: red, $hover-text-color:red) {
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+    border: none;
+    color: $text-color;
+    font-size: $font-size;
+    transition: 0.3s;
+    font-weight: 700;
+    text-align: center;
+    border-radius: $border-radius;
+  
+
+  }
+  
+
+//   2- slide
+
+
+
+
+.swiper2 {
+    width: 240px;
+    height: 320px;
+  }
+
+  .swiper-slide2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .swiper-slide2:nth-child(1n) {
+    background-color: rgb(206, 17, 17);
+  }
+
+  .swiper-slide2:nth-child(2n) {
+    background-color: rgb(0, 140, 255);
+  }
+
+  .swiper-slide2:nth-child(3n) {
+    background-color: rgb(10, 184, 111);
+  }
+
+  .swiper-slide2:nth-child(4n) {
+    background-color: rgb(211, 122, 7);
+  }
+
+  .swiper-slide2:nth-child(5n) {
+    background-color: rgb(118, 163, 12);
+  }
+
+  .swiper-slide2:nth-child(6n) {
+    background-color: rgb(180, 10, 47);
+  }
+
+  .swiper-slide2:nth-child(7n) {
+    background-color: rgb(35, 99, 19);
+  }
+
+  .swiper-slide2:nth-child(8n) {
+    background-color: rgb(0, 68, 255);
+  }
+
+  .swiper-slide2:nth-child(9n) {
+    background-color: rgb(218, 12, 218);
+  }
+
+  .swiper-slide2:nth-child(10n) {
+    background-color: rgb(54, 94, 77);
+  }
