@@ -160,8 +160,17 @@ button {
   color: #000000;
 }
 
+@media (max-width: 666px) {
+  .header_center {
+    display: none;
+  }
+}
 .showcase > div {
   padding-top: 30px;
+}
+
+.swiper-slide {
+  position: relative;
 }
 
 .showcase_btn {
@@ -171,7 +180,8 @@ button {
   position: absolute;
   bottom: 10px;
   opacity: 0;
-  transition: 0.4s;
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* Bu showcase_btn hover bo'lganda yashirinib qolishini oldini oladi */
 }
 .showcase_btn a {
   font-size: 20px;
@@ -179,19 +189,11 @@ button {
   border-bottom: 1px solid gray;
 }
 
-.swiper-slide img:hover ~ .showcase_btn {
+/* Rasm yoki showcase_btn hover bo'lganda telefon va emailni ko'rsatadi */
+.swiper-slide:hover .showcase_btn,
+.swiper-slide .showcase_btn:hover {
   opacity: 1;
-  display: flex;
-  align-items: center;
-  gap: 100px;
-  position: absolute;
-  bottom: 10px;
-  transition: 0.4s;
-}
-.swiper-slide img:hover ~ .showcase_btn a {
-  font-size: 20px;
-  color: gray;
-  border-bottom: 1px solid gray;
+  pointer-events: auto; /* showcase_btn elementiga hover qilishga ruxsat beradi */
 }
 
 .books > div {
@@ -267,6 +269,16 @@ button {
   }
   to {
     text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700, 0 0 50px #FFFFFF, 0 0 80px #FFFFFF;
+  }
+}
+@media (max-width: 1022px) {
+  .books_top {
+    gap: 80px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 

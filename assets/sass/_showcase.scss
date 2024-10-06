@@ -1,37 +1,32 @@
-.showcase>div{
+.showcase > div {
     padding-top: 30px;
-}
-
-.showcase_btn{
+  }
+  
+  .swiper-slide {
+    position: relative;
+  }
+  
+  .showcase_btn {
     display: flex;
     align-items: center;
     gap: 100px;
     position: absolute;
     bottom: 10px;
     opacity: 0;
-    transition: .4s;
-    a{
-        font-size: 20px;
-        color: gray;
-        border-bottom: 1px solid gray;
-    }
-
-}
-
-
-.swiper-slide img:hover ~ .showcase_btn {
+    transition: opacity 0.4s ease;
+    pointer-events: none; /* Bu showcase_btn hover bo'lganda yashirinib qolishini oldini oladi */
     
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    position: absolute;
-    bottom: 10px;
-    transition: .4s;
-    a{
-        font-size: 20px;
-        color: gray;
-        border-bottom: 1px solid gray;
+    a {
+      font-size: 20px;
+      color: gray;
+      border-bottom: 1px solid gray;
     }
-
   }
+  
+  /* Rasm yoki showcase_btn hover bo'lganda telefon va emailni ko'rsatadi */
+  .swiper-slide:hover .showcase_btn,
+  .swiper-slide .showcase_btn:hover {
+    opacity: 1;
+    pointer-events: auto; /* showcase_btn elementiga hover qilishga ruxsat beradi */
+  }
+  
